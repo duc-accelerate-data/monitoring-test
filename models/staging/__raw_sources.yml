@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    description: Raw data from source systems
+    tables:
+      - name: customers
+        description: Customer master table
+        columns:
+          - name: customer_id
+            description: Unique customer identifier
+            data_type: integer
+            tests:
+              - not_null
+              - unique
+
+          - name: name
+            description: Customer name
+            data_type: text
+
+          - name: email
+            description: Customer email address
+            data_type: text
+
+          - name: created_at
+            description: Customer record creation timestamp
+            data_type: timestamp
