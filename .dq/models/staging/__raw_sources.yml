@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: customers
+        columns:
+          - name: customer_id
+            description: Primary key for customers
+            data_type: integer
+          - name: name
+            description: Customer name
+            data_type: text
+          - name: email
+            description: Customer email address
+            data_type: text
+          - name: created_at
+            description: Timestamp when customer was created
+            data_type: timestamp
