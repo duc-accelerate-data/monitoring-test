@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: raw
+    description: Raw source data
+    tables:
+      - name: customers
+        description: Customer records from the raw layer
+        columns:
+          - name: customer_id
+            description: Unique identifier for the customer
+            data_type: integer
+          - name: name
+            description: Customer name
+            data_type: text
+          - name: email
+            description: Customer email address
+            data_type: text
+          - name: created_at
+            description: Timestamp when the customer record was created
+            data_type: timestamp
