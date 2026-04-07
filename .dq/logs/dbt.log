@@ -1,0 +1,14 @@
+[0m14:45:49.549460 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10432e7e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104bc6c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104bc6990>]}
+
+
+============================== 14:45:49.555406 | 4e4e2452-e1af-486d-bcf2-42748fe9f542 ==============================
+[0m14:45:49.555406 [info ] [MainThread]: Running with dbt=1.11.6
+[0m14:45:49.556486 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'invocation_command': 'dbt compile --select stg_customers', 'empty': 'False', 'profiles_dir': '/Users/duc/Documents/accelerate_data/vd-studio/tmp/clones/aad05239-e60c-4dab-99cb-506af255b677/59561d9d-37eb-4bf9-a27e-8ad8878c0635/.dq', 'cache_selected_only': 'False', 'printer_width': '80', 'indirect_selection': 'eager', 'static_parser': 'True', 'partial_parse': 'True', 'use_colors': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'log_format': 'default', 'quiet': 'False', 'fail_fast': 'False', 'warn_error': 'None', 'debug': 'False', 'send_anonymous_usage_stats': 'True', 'no_print': 'None', 'use_experimental_parser': 'False', 'introspect': 'True', 'log_cache_events': 'False', 'log_path': '/Users/duc/Documents/accelerate_data/vd-studio/tmp/clones/aad05239-e60c-4dab-99cb-506af255b677/59561d9d-37eb-4bf9-a27e-8ad8878c0635/.dq/logs'}
+[0m14:45:49.565680 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Env var required but not provided: 'LAKEHOUSE'
+[0m14:45:49.569186 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 0.1826515, "process_in_blocks": "0", "process_kernel_time": 0.28505, "process_mem_max_rss": "100757504", "process_out_blocks": "0", "process_user_time": 2.060385}
+[0m14:45:49.569940 [debug] [MainThread]: Command `dbt compile` failed at 14:45:49.569782 after 0.18 seconds
+[0m14:45:49.570385 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1001b28a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1049f8560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104623b00>]}
+[0m14:45:49.570815 [debug] [MainThread]: Flushing usage events
+[0m14:45:50.695703 [debug] [MainThread]: An error was encountered while trying to flush usage events
