@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: customers
+        columns:
+          - name: customer_id
+            description: Unique identifier for the customer
+          - name: name
+            description: Customer full name
+          - name: email
+            description: Customer email address
+          - name: created_at
+            description: Timestamp when the customer record was created
