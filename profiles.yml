@@ -1,0 +1,72 @@
+dbt_design_e2e_0408t2240:
+  outputs:
+    ephemeral_dev:
+      type: fabricspark
+      method: livy
+      authentication: vdstudio_oauth
+      endpoint: https://msitapi.fabric.microsoft.com/v1
+      workspaceid: "{{ env_var('WORKSPACE_ID') }}"
+      lakehouseid: "{{ env_var('LAKEHOUSE_ID') }}"
+      lakehouse: "{{ env_var('LAKEHOUSE') }}"
+      database: "{{ env_var('LAKEHOUSE') }}"
+      schema: "{{ env_var('SCHEMA') }}"
+      reuse_livy_session: true
+      session_id_file: /tmp/livy-session-id.txt
+      lakehouse_schemas_enabled: true
+      connect_retries: 2
+      connect_timeout: 500
+      threads: 10
+      spark_config:
+        name: "{{ env_var('DBT_JOB_NAME') }}"
+        driverCores: 4
+        driverMemory: 28g
+        executorCores: 4
+        executorMemory: 28g
+
+    ephemeral_dep:
+      type: fabricspark
+      method: livy
+      authentication: fabric_notebook
+      endpoint: https://msitapi.fabric.microsoft.com/v1
+      workspaceid: "{{ env_var('WORKSPACE_ID') }}"
+      lakehouseid: "{{ env_var('LAKEHOUSE_ID') }}"
+      lakehouse: "{{ env_var('LAKEHOUSE') }}"
+      database: "{{ env_var('LAKEHOUSE') }}"
+      schema: "{{ env_var('SCHEMA') }}"
+      reuse_livy_session: true
+      session_id_file: /tmp/livy-session-id.txt
+      lakehouse_schemas_enabled: true
+      connect_retries: 2
+      connect_timeout: 500
+      threads: 10
+      spark_config:
+        name: "{{ env_var('DBT_JOB_NAME') }}"
+        driverCores: 4
+        driverMemory: 28g
+        executorCores: 4
+        executorMemory: 28g
+
+    prod:
+      type: fabricspark
+      method: livy
+      authentication: fabric_notebook
+      endpoint: https://msitapi.fabric.microsoft.com/v1
+      workspaceid: "{{ env_var('WORKSPACE_ID') }}"
+      lakehouseid: "{{ env_var('LAKEHOUSE_ID') }}"
+      lakehouse: "{{ env_var('LAKEHOUSE') }}"
+      database: "{{ env_var('LAKEHOUSE') }}"
+      schema: "{{ env_var('SCHEMA') }}"
+      reuse_livy_session: true
+      session_id_file: /tmp/livy-session-id.txt
+      lakehouse_schemas_enabled: true
+      connect_retries: 2
+      connect_timeout: 500
+      threads: 10
+      spark_config:
+        name: "{{ env_var('DBT_JOB_NAME') }}"
+        driverCores: 4
+        driverMemory: 28g
+        executorCores: 4
+        executorMemory: 28g
+
+  target: ephemeral_dev
