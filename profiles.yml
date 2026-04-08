@@ -1,0 +1,37 @@
+dbt_fab_spark:
+  target: ephemeral_dev
+  outputs:
+    ephemeral_dev:
+      type: fabricspark
+      method: vdstudio_oauth
+      driver: ODBC Driver 18 for SQL Server
+      server: "{{ env_var('FABRIC_SQL_ENDPOINT') }}"
+      database: "{{ env_var('FABRIC_LAKEHOUSE') }}"
+      schema: dbo
+      connect_retries: 3
+      connect_timeout: 30
+      retry_all: true
+
+    ephemeral_dep:
+      type: fabricspark
+      method: livy
+      host: https://api.fabric.microsoft.com/v1
+      server: "{{ env_var('FABRIC_SQL_ENDPOINT') }}"
+      database: "{{ env_var('FABRIC_LAKEHOUSE') }}"
+      schema: dbo
+      workspace: "{{ env_var('FABRIC_WORKSPACE_ID') }}"
+      lakehouse_id: "{{ env_var('FABRIC_LAKEHOUSE_ID') }}"
+      connect_retries: 3
+      connect_timeout: 30
+
+    prod:
+      type: fabricspark
+      method: livy
+      host: https://api.fabric.microsoft.com/v1
+      server: "{{ env_var('FABRIC_SQL_ENDPOINT') }}"
+      database: "{{ env_var('FABRIC_LAKEHOUSE') }}"
+      schema: dbo
+      workspace: "{{ env_var('FABRIC_WORKSPACE_ID') }}"
+      lakehouse_id: "{{ env_var('FABRIC_LAKEHOUSE_ID') }}"
+      connect_retries: 3
+      connect_timeout: 30
