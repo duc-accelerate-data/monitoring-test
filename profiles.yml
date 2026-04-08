@@ -1,0 +1,30 @@
+dbt_fab_spark:
+  target: ephemeral_dev
+  outputs:
+    ephemeral_dev:
+      type: fabricspark
+      method: livy
+      host: api.fabric.microsoft.com
+      schema: dbo
+      lakehouse: DBT_DESIGN_E2E_0408T2351_LH
+      workspace: DBT_DESIGN_E2E_0408T2351_MAIN
+      auth: vdstudio_oauth
+      organization: "{{ env_var('VD_STUDIO_TENANT_ID') }}"
+
+    ephemeral_dep:
+      type: fabricspark
+      method: livy
+      host: api.fabric.microsoft.com
+      schema: dbo
+      lakehouse: DBT_DESIGN_E2E_0408T2351_LH
+      workspace: DBT_DESIGN_E2E_0408T2351_MAIN
+      auth: CLI
+
+    prod:
+      type: fabricspark
+      method: livy
+      host: api.fabric.microsoft.com
+      schema: dbo
+      lakehouse: DBT_DESIGN_E2E_0408T2351_LH
+      workspace: DBT_DESIGN_E2E_0408T2351_MAIN
+      auth: CLI
