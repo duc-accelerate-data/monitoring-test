@@ -1,0 +1,61 @@
+[0m11:34:21.008102 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1071da9f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10788b6b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10788b260>]}
+
+
+============================== 11:34:21.016149 | 740af3ea-6cf7-4278-b9ec-39183603eef5 ==============================
+[0m11:34:21.016149 [info ] [MainThread]: Running with dbt=1.11.6
+[0m11:34:21.016962 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'printer_width': '80', 'profiles_dir': '/Users/duc/Documents/accelerate_data/vd-studio/tmp/clones/aad05239-e60c-4dab-99cb-506af255b677/5bc8279c-9ac8-4de7-a058-17f294ae712d/.dq', 'log_format': 'default', 'log_cache_events': 'False', 'warn_error': 'None', 'debug': 'False', 'partial_parse': 'True', 'use_colors': 'True', 'target_path': 'None', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'version_check': 'True', 'static_parser': 'True', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'invocation_command': 'dbt compile --target dev', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'empty': 'False', 'no_print': 'None', 'log_path': '/Users/duc/Documents/accelerate_data/vd-studio/tmp/clones/aad05239-e60c-4dab-99cb-506af255b677/5bc8279c-9ac8-4de7-a058-17f294ae712d/.dq/logs', 'write_json': 'True'}
+[0m11:34:21.026377 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Env var required but not provided: 'LAKEHOUSE'
+[0m11:34:21.030279 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 0.20858438, "process_in_blocks": "0", "process_kernel_time": 0.534216, "process_mem_max_rss": "100499456", "process_out_blocks": "0", "process_user_time": 2.485615}
+[0m11:34:21.031531 [debug] [MainThread]: Command `dbt compile` failed at 11:34:21.031300 after 0.21 seconds
+[0m11:34:21.032286 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10788b470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10788af00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10732c260>]}
+[0m11:34:21.033161 [debug] [MainThread]: Flushing usage events
+[0m11:34:22.621323 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:35:55.573366 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c4a6ab0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c6f3290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c6f2ea0>]}
+
+
+============================== 11:35:55.586530 | 07e2eb56-9159-462e-91bf-7259f8660f56 ==============================
+[0m11:35:55.586530 [info ] [MainThread]: Running with dbt=1.11.6
+[0m11:35:55.588576 [debug] [MainThread]: running dbt with arguments {'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'profiles_dir': '/Users/duc/Documents/accelerate_data/vd-studio/tmp/clones/aad05239-e60c-4dab-99cb-506af255b677/5bc8279c-9ac8-4de7-a058-17f294ae712d/.dq', 'use_experimental_parser': 'False', 'log_format': 'default', 'log_cache_events': 'False', 'empty': 'False', 'version_check': 'True', 'target_path': 'None', 'invocation_command': 'dbt compile --target dev', 'warn_error': 'None', 'cache_selected_only': 'False', 'log_path': '/Users/duc/Documents/accelerate_data/vd-studio/tmp/clones/aad05239-e60c-4dab-99cb-506af255b677/5bc8279c-9ac8-4de7-a058-17f294ae712d/.dq/logs', 'debug': 'False', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'fail_fast': 'False', 'introspect': 'True', 'printer_width': '80', 'use_colors': 'True', 'no_print': 'None', 'indirect_selection': 'eager', 'write_json': 'True', 'quiet': 'False'}
+[0m11:35:55.631987 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.fabricspark'
+[0m11:35:55.633468 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Credentials in profile "vd_dq", target "dev" invalid: Runtime Error
+    Could not find adapter type fabricspark!
+[0m11:35:55.643310 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 0.4781331, "process_in_blocks": "0", "process_kernel_time": 1.139515, "process_mem_max_rss": "100458496", "process_out_blocks": "0", "process_user_time": 5.383944}
+[0m11:35:55.646183 [debug] [MainThread]: Command `dbt compile` failed at 11:35:55.645778 after 0.48 seconds
+[0m11:35:55.647602 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10be80a70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c51e6c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c670b60>]}
+[0m11:35:55.650226 [debug] [MainThread]: Flushing usage events
+[0m11:35:57.228826 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:39:13.265334 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1115ccad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112753ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112753d90>]}
+
+
+============================== 11:39:13.326972 | 3cc773b2-ada4-4183-8314-ce0a59355434 ==============================
+[0m11:39:13.326972 [info ] [MainThread]: Running with dbt=1.11.7
+[0m11:39:13.327743 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'profiles_dir': '/Users/duc/Documents/accelerate_data/vd-studio/tmp/clones/aad05239-e60c-4dab-99cb-506af255b677/5bc8279c-9ac8-4de7-a058-17f294ae712d/.dq', 'log_format': 'default', 'printer_width': '80', 'static_parser': 'True', 'introspect': 'True', 'cache_selected_only': 'False', 'log_path': '/Users/duc/Documents/accelerate_data/vd-studio/tmp/clones/aad05239-e60c-4dab-99cb-506af255b677/5bc8279c-9ac8-4de7-a058-17f294ae712d/.dq/logs', 'invocation_command': 'dbt compile --target dev', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'target_path': 'None', 'debug': 'False', 'empty': 'False', 'version_check': 'True', 'quiet': 'False', 'use_colors': 'True', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'write_json': 'True'}
+[0m11:39:13.339255 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.fabricspark'
+[0m11:39:13.339869 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Credentials in profile "vd_dq", target "dev" invalid: Runtime Error
+    Could not find adapter type fabricspark!
+[0m11:39:13.341537 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 0.19489148, "process_in_blocks": "0", "process_kernel_time": 1.437524, "process_mem_max_rss": "132243456", "process_out_blocks": "0", "process_user_time": 4.540732}
+[0m11:39:13.342209 [debug] [MainThread]: Command `dbt compile` failed at 11:39:13.342077 after 0.20 seconds
+[0m11:39:13.342614 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1128c4050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1128c0050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112845ae0>]}
+[0m11:39:13.343015 [debug] [MainThread]: Flushing usage events
+[0m11:39:14.900827 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:39:23.059626 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1087f4d70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1097bb750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1097bb9d0>]}
+
+
+============================== 11:39:23.066537 | bed49b8d-a586-4f55-8026-88361471b59f ==============================
+[0m11:39:23.066537 [info ] [MainThread]: Running with dbt=1.11.7
+[0m11:39:23.067405 [debug] [MainThread]: running dbt with arguments {'use_experimental_parser': 'False', 'use_colors': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'version_check': 'True', 'log_cache_events': 'False', 'debug': 'False', 'invocation_command': 'dbt compile --target ephemeral_dev', 'empty': 'False', 'no_print': 'None', 'printer_width': '80', 'indirect_selection': 'eager', 'warn_error': 'None', 'profiles_dir': '/Users/duc/Documents/accelerate_data/vd-studio/tmp/clones/aad05239-e60c-4dab-99cb-506af255b677/5bc8279c-9ac8-4de7-a058-17f294ae712d/.dq', 'log_path': '/Users/duc/Documents/accelerate_data/vd-studio/tmp/clones/aad05239-e60c-4dab-99cb-506af255b677/5bc8279c-9ac8-4de7-a058-17f294ae712d/.dq/logs', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'quiet': 'False', 'write_json': 'True', 'static_parser': 'True', 'fail_fast': 'False'}
+[0m11:39:23.071636 [error] [MainThread]: Encountered an error:
+Runtime Error
+  The profile 'vd_dq' does not have a target named 'ephemeral_dev'. The valid target names for this profile are:
+   - dev
+[0m11:39:23.072400 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 0.14297928, "process_in_blocks": "0", "process_kernel_time": 0.363354, "process_mem_max_rss": "103202816", "process_out_blocks": "0", "process_user_time": 1.817843}
+[0m11:39:23.073177 [debug] [MainThread]: Command `dbt compile` failed at 11:39:23.073015 after 0.14 seconds
+[0m11:39:23.073662 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1097e1a70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1097e55b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10964d9d0>]}
+[0m11:39:23.074052 [debug] [MainThread]: Flushing usage events
+[0m11:39:24.171975 [debug] [MainThread]: An error was encountered while trying to flush usage events
