@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: example_source
+    description: Example source system
+    database: ai_fork_lake
+    schema: dbo
+    tables:
+      - name: example_table
+        description: Example table for demonstration
