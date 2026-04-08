@@ -1,0 +1,54 @@
+dbt_design_e2e_0408t1243:
+  target: dev
+  outputs:
+    dev:
+      type: fabric
+      driver: "ODBC Driver 18 for SQL Server"
+      host: zcoepygy7vhunaxjs7ut7gix3m-ei4zqyco474efo2gsziuwxjfxu.datawarehouse.fabric.microsoft.com
+      port: 1433
+      database: ai_fork_lake
+      schema: dbo
+      authentication: CLI
+      encrypt: true
+      trust_cert: false
+      retries: 3
+      threads: 4
+
+    ephemeral_dev:
+      type: fabric
+      driver: "ODBC Driver 18 for SQL Server"
+      host: zcoepygy7vhunaxjs7ut7gix3m-ei4zqyco474efo2gsziuwxjfxu.datawarehouse.fabric.microsoft.com
+      port: 1433
+      database: ai_fork_lake
+      schema: dbo
+      authentication: CLI
+      encrypt: true
+      trust_cert: false
+      retries: 3
+      threads: 4
+
+    ephemeral_dep:
+      type: fabric
+      driver: "ODBC Driver 18 for SQL Server"
+      host: zcoepygy7vhunaxjs7ut7gix3m-ei4zqyco474efo2gsziuwxjfxu.datawarehouse.fabric.microsoft.com
+      port: 1433
+      database: ai_fork_lake
+      schema: dbo
+      authentication: CLI
+      encrypt: true
+      trust_cert: false
+      retries: 3
+      threads: 4
+
+    prod:
+      type: fabric
+      driver: "ODBC Driver 18 for SQL Server"
+      host: zcoepygy7vhunaxjs7ut7gix3m-ei4zqyco474efo2gsziuwxjfxu.datawarehouse.fabric.microsoft.com
+      port: 1433
+      database: ai_fork_lake
+      schema: dbo
+      authentication: CLI
+      encrypt: true
+      trust_cert: false
+      retries: 3
+      threads: 4
