@@ -1,0 +1,39 @@
+dbt_design_e2e_0408t1750:
+  target: ephemeral_dev
+  outputs:
+    ephemeral_dev:
+      type: fabricspark
+      method: vdstudio_oauth
+      host: "{{ env_var('FABRIC_HOST') }}"
+      workspace: DBT_DESIGN_E2E_0408T1750_MAIN
+      lakehouse: DBT_DESIGN_E2E_0408T1750_LH
+      schema: dbo
+      retry_all: true
+      threads: 4
+      connect_timeout: 60
+      connect_retries: 3
+      ephemeral_workspace_prefix: dbt_design_e2e_0408t1750_fb_
+
+    ephemeral_dep:
+      type: fabricspark
+      method: livy
+      host: "{{ env_var('FABRIC_HOST') }}"
+      workspace: DBT_DESIGN_E2E_0408T1750_MAIN
+      lakehouse: DBT_DESIGN_E2E_0408T1750_LH
+      schema: dbo
+      retry_all: true
+      threads: 4
+      connect_timeout: 60
+      connect_retries: 3
+
+    prod:
+      type: fabricspark
+      method: livy
+      host: "{{ env_var('FABRIC_HOST') }}"
+      workspace: DBT_DESIGN_E2E_0408T1750_MAIN
+      lakehouse: DBT_DESIGN_E2E_0408T1750_LH
+      schema: dbo
+      retry_all: true
+      threads: 4
+      connect_timeout: 60
+      connect_retries: 3
