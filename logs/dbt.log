@@ -1,0 +1,145 @@
+[0m23:34:22.537670 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b718e30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a52f470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a52c470>]}
+
+
+============================== 23:34:22.598044 | c9229ee8-a2fb-46af-9a57-dc068ef4c56a ==============================
+[0m23:34:22.598044 [info ] [MainThread]: Running with dbt=1.11.7
+[0m23:34:22.599006 [debug] [MainThread]: running dbt with arguments {'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'debug': 'False', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'printer_width': '80', 'profiles_dir': '/Users/duc/Documents/accelerate_data/vd-studio/tmp/clones/1abea738-518c-40af-89d0-a34f8138218d/e4a66f9b-375f-4943-adb2-d82f29d6dcd7', 'invocation_command': 'dbt compile --select stg_example --target ephemeral_dev', 'quiet': 'False', 'static_parser': 'True', 'no_print': 'None', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'version_check': 'True', 'target_path': 'None', 'log_path': '/Users/duc/Documents/accelerate_data/vd-studio/tmp/clones/1abea738-518c-40af-89d0-a34f8138218d/e4a66f9b-375f-4943-adb2-d82f29d6dcd7/logs', 'write_json': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'introspect': 'True', 'indirect_selection': 'eager'}
+[0m23:34:22.609368 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.vdstudio_oauth'
+[0m23:34:22.610112 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Credentials in profile "dbt_fab_spark", target "ephemeral_dev" invalid: Runtime Error
+    Could not find adapter type vdstudio_oauth!
+[0m23:34:22.616415 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 0.2163388, "process_in_blocks": "0", "process_kernel_time": 1.135384, "process_mem_max_rss": "138723328", "process_out_blocks": "0", "process_user_time": 4.487796}
+[0m23:34:22.617197 [debug] [MainThread]: Command `dbt compile` failed at 23:34:22.617058 after 0.22 seconds
+[0m23:34:22.617875 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b129040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b84b620>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b84b380>]}
+[0m23:34:22.618352 [debug] [MainThread]: Flushing usage events
+[0m23:34:24.282004 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:35:52.351639 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d139400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d7af9b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d7af620>]}
+
+
+============================== 23:35:52.360126 | 2954d17d-4006-4717-8472-0caaaf96efe9 ==============================
+[0m23:35:52.360126 [info ] [MainThread]: Running with dbt=1.11.7
+[0m23:35:52.361116 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'indirect_selection': 'eager', 'no_print': 'None', 'printer_width': '80', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'invocation_command': 'dbt compile --select stg_example --target ephemeral_dev', 'log_cache_events': 'False', 'log_path': '/Users/duc/Documents/accelerate_data/vd-studio/tmp/clones/1abea738-518c-40af-89d0-a34f8138218d/e4a66f9b-375f-4943-adb2-d82f29d6dcd7/logs', 'partial_parse': 'True', 'profiles_dir': '/Users/duc/Documents/accelerate_data/vd-studio/tmp/clones/1abea738-518c-40af-89d0-a34f8138218d/e4a66f9b-375f-4943-adb2-d82f29d6dcd7', 'version_check': 'True', 'static_parser': 'True', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'warn_error': 'None', 'quiet': 'False', 'use_colors': 'True', 'write_json': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'empty': 'False', 'log_format': 'default'}
+[0m23:35:52.569526 [debug] [MainThread]: Microsoft Fabric-Spark adapter: Setting fabricspark.connector to DEBUG
+[0m23:35:52.570168 [debug] [MainThread]: Microsoft Fabric-Spark adapter: Setting botocore to DEBUG
+[0m23:35:52.570577 [debug] [MainThread]: Microsoft Fabric-Spark adapter: Setting boto3 to DEBUG
+[0m23:35:52.570966 [debug] [MainThread]: Microsoft Fabric-Spark adapter: Setting Microsoft Fabric-Spark.connector to DEBUG
+[0m23:35:52.700112 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Credentials in profile "dbt_fab_spark", target "ephemeral_dev" invalid: Runtime Error
+    Must specify `database` when lakehouse_schemas_enabled=True. This enables three-part naming: lakehouse.schema.table
+[0m23:35:52.703739 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 0.45762622, "process_in_blocks": "0", "process_kernel_time": 0.473158, "process_mem_max_rss": "119795712", "process_out_blocks": "0", "process_user_time": 2.236931}
+[0m23:35:52.704710 [debug] [MainThread]: Command `dbt compile` failed at 23:35:52.704567 after 0.46 seconds
+[0m23:35:52.705169 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d7f3c80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10db06c30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d8511c0>]}
+[0m23:35:52.705632 [debug] [MainThread]: Flushing usage events
+[0m23:35:54.164470 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:36:18.399962 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ee46630>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f76f950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f76f5f0>]}
+
+
+============================== 23:36:18.408253 | dfeae97a-af6e-4424-8e1d-84b6cebcdd70 ==============================
+[0m23:36:18.408253 [info ] [MainThread]: Running with dbt=1.11.7
+[0m23:36:18.409590 [debug] [MainThread]: running dbt with arguments {'indirect_selection': 'eager', 'profiles_dir': '/Users/duc/Documents/accelerate_data/vd-studio/tmp/clones/1abea738-518c-40af-89d0-a34f8138218d/e4a66f9b-375f-4943-adb2-d82f29d6dcd7', 'use_colors': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'use_experimental_parser': 'False', 'printer_width': '80', 'cache_selected_only': 'False', 'log_format': 'default', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'invocation_command': 'dbt compile --select stg_example --target ephemeral_dev', 'static_parser': 'True', 'partial_parse': 'True', 'warn_error': 'None', 'log_cache_events': 'False', 'quiet': 'False', 'introspect': 'True', 'write_json': 'True', 'fail_fast': 'False', 'empty': 'False', 'target_path': 'None', 'log_path': '/Users/duc/Documents/accelerate_data/vd-studio/tmp/clones/1abea738-518c-40af-89d0-a34f8138218d/e4a66f9b-375f-4943-adb2-d82f29d6dcd7/logs', 'no_print': 'None'}
+[0m23:36:18.616752 [debug] [MainThread]: Microsoft Fabric-Spark adapter: Setting fabricspark.connector to DEBUG
+[0m23:36:18.617463 [debug] [MainThread]: Microsoft Fabric-Spark adapter: Setting botocore to DEBUG
+[0m23:36:18.617917 [debug] [MainThread]: Microsoft Fabric-Spark adapter: Setting boto3 to DEBUG
+[0m23:36:18.618373 [debug] [MainThread]: Microsoft Fabric-Spark adapter: Setting Microsoft Fabric-Spark.connector to DEBUG
+[0m23:36:18.745936 [debug] [MainThread]: fabricspark adapter: Schema-enabled lakehouse: using three-part naming ai_fork_lake_new_intent_e4a66f9b.dbo.table
+[0m23:36:18.932225 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'dfeae97a-af6e-4424-8e1d-84b6cebcdd70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ff287d0>]}
+[0m23:36:19.023504 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'dfeae97a-af6e-4424-8e1d-84b6cebcdd70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fe953a0>]}
+[0m23:36:19.026899 [info ] [MainThread]: Registered adapter: fabricspark=1.9.9
+[0m23:36:19.253034 [debug] [MainThread]: checksum: eef170235a92324b6e818e12d5a2f6c42b5c47682d3ac745a2d91a20bb5fb427, vars: {}, profile: , target: ephemeral_dev, version: 1.11.7
+[0m23:36:19.254167 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m23:36:19.254644 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'dfeae97a-af6e-4424-8e1d-84b6cebcdd70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fec4e30>]}
+[0m23:36:19.398260 [warn ] [MainThread]: [[33mWARNING[0m][UnexpectedJinjaBlockDeprecation]: Deprecated functionality
+Found unexpected 'do' block tag. in file
+`macros/materializations/models/table/create_table_as.sql`
+[0m23:36:19.398974 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'dfeae97a-af6e-4424-8e1d-84b6cebcdd70', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fec7470>]}
+[0m23:36:20.950874 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.dbt_design_e2e_0408t2323.marts
+[0m23:36:20.966497 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'dfeae97a-af6e-4424-8e1d-84b6cebcdd70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11038e240>]}
+[0m23:36:21.063133 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/duc/Documents/accelerate_data/vd-studio/tmp/clones/1abea738-518c-40af-89d0-a34f8138218d/e4a66f9b-375f-4943-adb2-d82f29d6dcd7/target/manifest.json
+[0m23:36:21.066479 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/duc/Documents/accelerate_data/vd-studio/tmp/clones/1abea738-518c-40af-89d0-a34f8138218d/e4a66f9b-375f-4943-adb2-d82f29d6dcd7/target/semantic_manifest.json
+[0m23:36:21.168332 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'dfeae97a-af6e-4424-8e1d-84b6cebcdd70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1105a9e20>]}
+[0m23:36:21.168919 [info ] [MainThread]: Found 1 model, 1 source, 514 macros
+[0m23:36:21.169364 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'dfeae97a-af6e-4424-8e1d-84b6cebcdd70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11034ad20>]}
+[0m23:36:21.171532 [info ] [MainThread]: 
+[0m23:36:21.172020 [info ] [MainThread]: Concurrency: 1 threads (target='ephemeral_dev')
+[0m23:36:21.172400 [info ] [MainThread]: 
+[0m23:36:21.172958 [debug] [MainThread]: Acquiring new fabricspark connection 'master'
+[0m23:36:21.173989 [debug] [ThreadPool]: Acquiring new fabricspark connection 'list_ai_fork_lake_new_intent_e4a66f9b_dbo_staging'
+[0m23:36:21.187856 [debug] [ThreadPool]: Microsoft Fabric-Spark adapter: NotImplemented: add_begin_query
+[0m23:36:21.188395 [debug] [ThreadPool]: Using fabricspark connection "list_ai_fork_lake_new_intent_e4a66f9b_dbo_staging"
+[0m23:36:21.188789 [debug] [ThreadPool]: On list_ai_fork_lake_new_intent_e4a66f9b_dbo_staging: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_fab_spark", "target_name": "ephemeral_dev", "connection_name": "list_ai_fork_lake_new_intent_e4a66f9b_dbo_staging"} */
+show table extended in dbo_staging like '*'
+  
+[0m23:36:21.189183 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:36:21.189589 [info ] [ThreadPool]: Microsoft Fabric-Spark adapter: Livy reuse is %s. Session cache path: %s
+[0m23:36:21.190001 [info ] [ThreadPool]: Microsoft Fabric-Spark adapter: Creating new livy session
+[0m23:36:21.190392 [debug] [ThreadPool]: Microsoft Fabric-Spark adapter: Creating Livy session (this may take a few minutes)
+[0m23:36:21.190739 [info ] [ThreadPool]: Microsoft Fabric-Spark adapter: Using vdstudio_oauth auth
+[0m23:36:37.178864 [debug] [ThreadPool]: Microsoft Fabric-Spark adapter: New livy session id is: aaadc7ed-af3d-4feb-9ffc-d19bb6c69f27, {'livyInfo': {'startingAt': '2026-04-08T16:32:08.4241839+00:00', 'idleAt': '2026-04-08T16:33:09.0514908+00:00', 'currentState': 'idle', 'jobCreationRequest': {'name': 'sparksession', 'conf': {'spark.livy.synapse.sql.displayFormatter.enabled': 'true', 'spark.eventLog.dir': 'abfss://a1afb710-55f0-424d-a564-8efa8554c1f6@spark5triprodsea.dfs.core.windows.net/events/812fc2d4-90b7-495f-b0a3-4bc833e516fa/eventLogs/'}, 'driverMemory': '56g', 'driverCores': 8, 'executorMemory': '56g', 'executorCores': 8, 'numExecutors': 1}}, 'name': 'dbt_ephemeral_dev_f8f39ead-0048-4b47-bccb-64e31c35c7dc', 'id': 'aaadc7ed-af3d-4feb-9ffc-d19bb6c69f27', 'appId': 'application_1775665931290_0001', 'appInfo': {'sparkUiUrl': 'http://vm-4e800410:8088/proxy/application_1775665931290_0001/', 'impulseErrorCode': None, 'sparkSystemContextUrl': 'https://vm-4e800410:9099', 'isStreamingQueryExists': 'false', 'impulseClassification': None, 'impulseTsg': None, 'maxReplCount': '5', 'isSessionTimedOut': 'false', 'driverLogUrl': 'http://vm-4e800410:8042/node/containerlogs/container_1775665931290_0001_01_000001/trusted-service-user', 'isErrorRetriable': 'true'}, 'artifactId': 'e568cfce-1104-4fa7-8cab-8f635472f860', 'jobType': 'SparkSession', 'submitterId': 'efef104a-0b1a-41dd-b453-37907a4f4eba', 'submitterName': 'e2e-tests@eng.acceleratedata.ai', 'log': ['profiling:/__w:Cannot create directory', 'profiling:/__w/1/s/cpp/build_output/global/jni/CMakeFiles/vegasjni.dir/src/PosixSemaphore.cpp.gcda:Skip', 'profiling:/__w:Cannot create directory', 'profiling:/__w/1/s/cpp/build_output/global/jni/CMakeFiles/vegasjni.dir/src/UxSocketBridge.cpp.gcda:Skip', 'profiling:/__w:Cannot create directory', 'profiling:/__w/1/s/cpp/build_output/global/jni/CMakeFiles/vegasjni.dir/src/HelloWorld.cpp.gcda:Skip', 'profiling:/__w:Cannot create directory', 'profiling:/__w/1/s/cpp/build_output/global/jni/CMakeFiles/vegasjni.dir/src/jniexceptions.cpp.gcda:Skip', '\nstderr: ', '\nYARN Diagnostics: '], 'pluginInfo': {'preparationStartedAt': '2026-04-08T16:30:32.2306414+00:00', 'resourceAcquisitionStartedAt': '2026-04-08T16:30:37.2596031+00:00', 'submissionStartedAt': '2026-04-08T16:31:52.4189807+00:00', 'monitoringStartedAt': '2026-04-08T16:32:13.4491992+00:00', 'currentState': 'Monitoring'}, 'schedulerInfo': {'submittedAt': '2026-04-08T16:36:25.1077476+00:00', 'queuedAt': '2026-04-08T16:31:47.4054477+00:00', 'currentState': 'Queued'}, 'state': 'idle', 'tags': {}, 'result': 'Uncertain'}
+[0m23:36:37.180939 [debug] [ThreadPool]: Microsoft Fabric-Spark adapter: Livy session created successfully
+[0m23:36:37.184944 [debug] [ThreadPool]: Microsoft Fabric-Spark adapter: Submitted: {'code': "show table extended in dbo_staging like '*'", 'kind': 'sql'} https://msitapi.fabric.microsoft.com/v1/workspaces/48d3031d-f50f-4304-96cb-2054fc4051fd/lakehouses/e568cfce-1104-4fa7-8cab-8f635472f860/livyapi/versions/2023-12-01/sessions/aaadc7ed-af3d-4feb-9ffc-d19bb6c69f27/statements
+[0m23:36:47.708209 [debug] [ThreadPool]: Microsoft Fabric-Spark adapter: {'id': 1, 'code': "show table extended in dbo_staging like '*'", 'state': 'available', 'output': {'status': 'error', 'execution_count': 1, 'ename': 'Error', 'evalue': '[SCHEMA_NOT_FOUND] The schema `default.ephm_e2e_new-intent-e4a66f9b.ai_fork_lake_new_intent_e4a66f9b.dbo_staging` cannot be found. Verify the spelling and correctness of the schema and catalog.\nIf you did not qualify the name with a catalog, verify the current_schema() output, or qualify the name with the correct catalog.\nTo tolerate the error on drop use DROP SCHEMA IF EXISTS.', 'traceback': ['org.apache.spark.sql.catalyst.catalog.SessionCatalog.requireDbExists(SessionCatalog.scala:297)', 'org.apache.spark.sql.catalyst.catalog.SessionCatalog.listTables(SessionCatalog.scala:1173)', 'org.apache.spark.sql.catalyst.catalog.SessionCatalog.listTables(SessionCatalog.scala:1154)', 'org.apache.spark.sql.execution.command.ShowTablesCommand.$anonfun$run$44(tables.scala:1238)', 'scala.Option.map(Option.scala:230)', 'org.apache.spark.sql.execution.command.ShowTablesCommand.run(tables.scala:1238)', 'org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:75)', 'org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:73)', 'org.apache.spark.sql.execution.command.ExecutedCommandExec.executeCollect(commands.scala:84)', 'org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:243)', 'org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$2(SQLExecution.scala:287)', 'org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:344)', 'org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:273)', 'org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:959)', 'org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:264)', 'org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:243)', 'org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:231)', 'org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:461)', 'org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(origin.scala:76)', 'org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:461)', 'org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:36)', 'org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:278)', 'org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:274)', 'org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:36)', 'org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:36)', 'org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:437)', 'org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:231)', 'org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:215)', 'org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:209)', 'org.apache.spark.sql.Dataset.<init>(Dataset.scala:234)', 'org.apache.spark.sql.Dataset$.$anonfun$ofRows$2(Dataset.scala:103)', 'org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:959)', 'org.apache.spark.sql.Dataset$.ofRows(Dataset.scala:100)', 'org.apache.spark.sql.SparkSession.$anonfun$sql$4(SparkSession.scala:750)', 'org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:959)', 'org.apache.spark.sql.SparkSession.sql(SparkSession.scala:741)', 'org.apache.spark.sql.SparkSession.sql(SparkSession.scala:772)', 'org.apache.spark.sql.SparkSession.sql(SparkSession.scala:803)', 'org.apache.livy.repl.SQLInterpreter.execute(SQLInterpreter.scala:164)', 'org.apache.livy.repl.Session.$anonfun$executeCode$1(Session.scala:924)', 'scala.Option.map(Option.scala:230)', 'org.apache.livy.repl.Session.executeCode(Session.scala:921)', 'org.apache.livy.repl.Session.$anonfun$execute$17(Session.scala:612)', 'org.apache.livy.repl.Session.withRealtimeOutputSupport(Session.scala:1175)', 'org.apache.livy.repl.Session.$anonfun$execute$3(Session.scala:612)', 'scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)', 'scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)', 'scala.util.Success.$anonfun$map$1(Try.scala:255)', 'scala.util.Success.map(Try.scala:213)', 'scala.concurrent.Future.$anonfun$map$1(Future.scala:292)', 'scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)', 'scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)', 'scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)', 'java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)', 'java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)', 'java.base/java.lang.Thread.run(Thread.java:829)']}}
+[0m23:36:47.711028 [debug] [ThreadPool]: Microsoft Fabric-Spark adapter: Error while running:
+/* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_fab_spark", "target_name": "ephemeral_dev", "connection_name": "list_ai_fork_lake_new_intent_e4a66f9b_dbo_staging"} */
+show table extended in dbo_staging like '*'
+  
+[0m23:36:47.712231 [debug] [ThreadPool]: Microsoft Fabric-Spark adapter: Database Error
+  Error while executing query: [SCHEMA_NOT_FOUND] The schema `default.ephm_e2e_new-intent-e4a66f9b.ai_fork_lake_new_intent_e4a66f9b.dbo_staging` cannot be found. Verify the spelling and correctness of the schema and catalog.
+  If you did not qualify the name with a catalog, verify the current_schema() output, or qualify the name with the correct catalog.
+  To tolerate the error on drop use DROP SCHEMA IF EXISTS.
+[0m23:36:47.713399 [debug] [ThreadPool]: Microsoft Fabric-Spark adapter: Error while running:
+macro list_relations_without_caching
+[0m23:36:47.714239 [debug] [ThreadPool]: Microsoft Fabric-Spark adapter: Runtime Error
+  Database Error
+    Error while executing query: [SCHEMA_NOT_FOUND] The schema `default.ephm_e2e_new-intent-e4a66f9b.ai_fork_lake_new_intent_e4a66f9b.dbo_staging` cannot be found. Verify the spelling and correctness of the schema and catalog.
+    If you did not qualify the name with a catalog, verify the current_schema() output, or qualify the name with the correct catalog.
+    To tolerate the error on drop use DROP SCHEMA IF EXISTS.
+[0m23:36:47.715236 [debug] [ThreadPool]: fabricspark adapter: Error while retrieving information about ai_fork_lake_new_intent_e4a66f9b.dbo_staging: Runtime Error
+  Database Error
+    Error while executing query: [SCHEMA_NOT_FOUND] The schema `default.ephm_e2e_new-intent-e4a66f9b.ai_fork_lake_new_intent_e4a66f9b.dbo_staging` cannot be found. Verify the spelling and correctness of the schema and catalog.
+    If you did not qualify the name with a catalog, verify the current_schema() output, or qualify the name with the correct catalog.
+    To tolerate the error on drop use DROP SCHEMA IF EXISTS.
+[0m23:36:47.716410 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'dfeae97a-af6e-4424-8e1d-84b6cebcdd70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110491ac0>]}
+[0m23:36:47.721679 [debug] [Thread-1 (]: Began running node model.dbt_design_e2e_0408t2323.stg_example
+[0m23:36:47.722732 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_ai_fork_lake_new_intent_e4a66f9b_dbo_staging, now model.dbt_design_e2e_0408t2323.stg_example)
+[0m23:36:47.723579 [debug] [Thread-1 (]: Began compiling node model.dbt_design_e2e_0408t2323.stg_example
+[0m23:36:47.736899 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_design_e2e_0408t2323.stg_example"
+[0m23:36:47.738452 [debug] [Thread-1 (]: Began executing node model.dbt_design_e2e_0408t2323.stg_example
+[0m23:36:47.739473 [debug] [Thread-1 (]: Finished running node model.dbt_design_e2e_0408t2323.stg_example
+[0m23:36:47.740917 [info ] [MainThread]: Microsoft Fabric-Spark adapter: Disconnect called. Livy reuse is %s. Session cache path: %s. Session id: %s
+[0m23:36:51.344486 [debug] [MainThread]: Microsoft Fabric-Spark adapter: Closed the livy session: aaadc7ed-af3d-4feb-9ffc-d19bb6c69f27
+[0m23:36:51.346786 [debug] [MainThread]: Command end result
+[0m23:36:51.384074 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/duc/Documents/accelerate_data/vd-studio/tmp/clones/1abea738-518c-40af-89d0-a34f8138218d/e4a66f9b-375f-4943-adb2-d82f29d6dcd7/target/manifest.json
+[0m23:36:51.386920 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/duc/Documents/accelerate_data/vd-studio/tmp/clones/1abea738-518c-40af-89d0-a34f8138218d/e4a66f9b-375f-4943-adb2-d82f29d6dcd7/target/semantic_manifest.json
+[0m23:36:51.396798 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/duc/Documents/accelerate_data/vd-studio/tmp/clones/1abea738-518c-40af-89d0-a34f8138218d/e4a66f9b-375f-4943-adb2-d82f29d6dcd7/target/run_results.json
+[0m23:36:51.397426 [info ] [MainThread]: Compiled node 'stg_example' is:
+
+
+with source as (
+    select * from ai_fork_lake_new_intent_e4a66f9b.dbo.example_table
+),
+
+renamed as (
+    select
+        id as example_id,
+        name as example_name,
+        created_at
+    from source
+)
+
+select * from renamed
+[0m23:36:51.398096 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- UnexpectedJinjaBlockDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m23:36:51.401016 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 33.110325, "process_in_blocks": "0", "process_kernel_time": 0.638063, "process_mem_max_rss": "144478208", "process_out_blocks": "0", "process_user_time": 4.62657}
+[0m23:36:51.401734 [debug] [MainThread]: Command `dbt compile` succeeded at 23:36:51.401605 after 33.11 seconds
+[0m23:36:51.402438 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f70ba70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1104923f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1103ec6e0>]}
+[0m23:36:51.403040 [debug] [MainThread]: Flushing usage events
+[0m23:36:52.503161 [debug] [MainThread]: An error was encountered while trying to flush usage events

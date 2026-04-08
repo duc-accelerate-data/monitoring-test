@@ -1,0 +1,45 @@
+dbt_fab_spark:
+  target: ephemeral_dev
+  outputs:
+    ephemeral_dev:
+      type: fabricspark
+      method: livy
+      authentication: vdstudio_oauth
+      schema: "{{ env_var('SCHEMA', 'dbo') }}"
+      database: "{{ env_var('LAKEHOUSE') }}"
+      workspaceid: "{{ env_var('WORKSPACE_ID') }}"
+      lakehouseid: "{{ env_var('LAKEHOUSE_ID') }}"
+      vdstudio_oauth_endpoint_url: "{{ env_var('VD_STUDIO_TOKEN_URL') }}"
+      connect_retries: 3
+      connect_timeout: 60
+      retry_all: true
+      spark_config:
+        name: "dbt_ephemeral_dev_{{ env_var('VD_STUDIO_USER_ID') }}"
+
+    ephemeral_dep:
+      type: fabricspark
+      method: livy
+      authentication: az_cli
+      schema: "{{ env_var('SCHEMA', 'dbo') }}"
+      database: "{{ env_var('LAKEHOUSE') }}"
+      workspaceid: "{{ env_var('WORKSPACE_ID') }}"
+      lakehouseid: "{{ env_var('LAKEHOUSE_ID') }}"
+      connect_retries: 3
+      connect_timeout: 60
+      retry_all: true
+      spark_config:
+        name: "dbt_ephemeral_dep"
+
+    prod:
+      type: fabricspark
+      method: livy
+      authentication: az_cli
+      schema: "{{ env_var('DOMAIN_SCHEMA', 'dbo') }}"
+      database: "{{ env_var('DOMAIN_LAKEHOUSE') }}"
+      workspaceid: "{{ env_var('DOMAIN_WORKSPACE_ID') }}"
+      lakehouseid: "{{ env_var('DOMAIN_LAKEHOUSE_ID') }}"
+      connect_retries: 3
+      connect_timeout: 60
+      retry_all: true
+      spark_config:
+        name: "dbt_prod"

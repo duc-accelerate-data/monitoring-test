@@ -1,0 +1,1 @@
+{"_invocation_id": "dfeae97a-af6e-4424-8e1d-84b6cebcdd70", "linked": {"0": {"name": "source.dbt_design_e2e_0408t2323.raw.example_table", "type": "source", "succ": [1]}, "1": {"name": "model.dbt_design_e2e_0408t2323.stg_example", "type": "model"}}}
