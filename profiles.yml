@@ -1,0 +1,40 @@
+dbt_fab_spark:
+  target: ephemeral_dev
+  outputs:
+    ephemeral_dev:
+      type: fabricspark
+      method: vdstudio_oauth
+      driver: '/opt/homebrew/lib/libsaslshim.dylib'
+      host: '{{ env_var("FABRIC_LAKEHOUSE_HOST") }}'
+      database: '{{ env_var("FABRIC_LAKEHOUSE_NAME") }}'
+      schema: dbo
+      threads: 4
+      connect_timeout: 60
+      connect_retries: 3
+      retry_all: true
+      token_url: '{{ env_var("VD_STUDIO_TOKEN_URL") }}'
+      user_id: '{{ env_var("VD_STUDIO_USER_ID") }}'
+
+    ephemeral_dep:
+      type: fabricspark
+      method: livy
+      driver: '/opt/homebrew/lib/libsaslshim.dylib'
+      host: '{{ env_var("FABRIC_LAKEHOUSE_HOST") }}'
+      database: '{{ env_var("FABRIC_LAKEHOUSE_NAME") }}'
+      schema: dbo
+      threads: 4
+      connect_timeout: 60
+      connect_retries: 3
+      retry_all: true
+
+    prod:
+      type: fabricspark
+      method: livy
+      driver: '/opt/homebrew/lib/libsaslshim.dylib'
+      host: '{{ env_var("FABRIC_LAKEHOUSE_HOST") }}'
+      database: '{{ env_var("FABRIC_LAKEHOUSE_NAME") }}'
+      schema: dbo
+      threads: 4
+      connect_timeout: 60
+      connect_retries: 3
+      retry_all: true
