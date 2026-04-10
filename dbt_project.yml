@@ -1,0 +1,25 @@
+name: 'new_intent_2445eada'
+version: '1.0.0'
+config-version: 2
+
+profile: 'dbt_fab_spark'
+
+model-paths: ['models']
+analysis-paths: ['analyses']
+test-paths: ['tests']
+seed-paths: ['seeds']
+macro-paths: ['macros']
+snapshot-paths: ['snapshots']
+
+clean-targets:
+  - 'target'
+  - 'dbt_packages'
+
+models:
+  new_intent_2445eada:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: ephemeral
+    marts:
+      +materialized: table
