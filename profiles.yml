@@ -1,0 +1,42 @@
+dbt_fab_spark:
+  target: ephemeral_dev
+  outputs:
+    ephemeral_dev:
+      type: fabricspark
+      method: livy
+      schema: dbo
+      host: '{{ env_var("LAKEHOUSE_SQL_ENDPOINT") }}'
+      workspaceid: '{{ env_var("WORKSPACE_ID") }}'
+      lakehouseid: '{{ env_var("LAKEHOUSE_ID") }}'
+      workspace_name: '`{{ env_var("WORKSPACE_NAME") }}`'
+      lakehouse: '`{{ env_var("LAKEHOUSE") }}`'
+      auth: vdstudio_oauth
+      vdstudio_token_url: '{{ env_var("VD_STUDIO_TOKEN_URL") }}'
+      vdstudio_user_id: '{{ env_var("VD_STUDIO_USER_ID") }}'
+      connect_timeout: 10
+      connect_retries: 5
+      request_timeout: 1800
+      spark_config:
+        name: dbt_spark_session
+
+    ephemeral_dep:
+      type: fabricspark
+      method: session
+      schema: dbo
+      host: '{{ env_var("LAKEHOUSE_SQL_ENDPOINT") }}'
+      workspaceid: '{{ env_var("WORKSPACE_ID") }}'
+      lakehouseid: '{{ env_var("LAKEHOUSE_ID") }}'
+      workspace_name: '`{{ env_var("WORKSPACE_NAME") }}`'
+      lakehouse: '`{{ env_var("LAKEHOUSE") }}`'
+      auth: cli
+
+    prod:
+      type: fabricspark
+      method: session
+      schema: dbo
+      host: '{{ env_var("DOMAIN_LAKEHOUSE_SQL_ENDPOINT") }}'
+      workspaceid: '{{ env_var("DOMAIN_WORKSPACE_ID") }}'
+      lakehouseid: '{{ env_var("DOMAIN_LAKEHOUSE_ID") }}'
+      workspace_name: '`{{ env_var("DOMAIN_WORKSPACE_NAME") }}`'
+      lakehouse: '`{{ env_var("DOMAIN_LAKEHOUSE") }}`'
+      auth: cli
