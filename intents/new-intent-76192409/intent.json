@@ -1,0 +1,17 @@
+{
+  "slug": "new-intent-76192409",
+  "type": "transformation",
+  "title": "Q1 Sales Performance Analysis",
+  "current_step": "requirements",
+  "items": [
+    { "type": "model", "name": "stg_salesforce__opportunity" },
+    { "type": "model", "name": "stg_salesforce__account" },
+    { "type": "model", "name": "dim_account" },
+    { "type": "model", "name": "fct_sales" }
+  ],
+  "gates": {
+    "requirements_review": { "status": "pending" },
+    "design_review": { "status": "pending" },
+    "code_review": { "status": "pending" }
+  }
+}
