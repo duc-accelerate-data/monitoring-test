@@ -6,3 +6,11 @@ connector = "salesforce"
 connector_source = "dlt-verified"
 schema = "src_abc"
 created_at = "2026-05-07T05:32:00.343Z"
+[sources.abcd.salesforce]
+domain = ""
+
+[studio.sources.abcd]
+connector = "salesforce"
+connector_source = "dlt-verified"
+schema = "src_abcd"
+created_at = "2026-05-07T05:36:49.613Z"
