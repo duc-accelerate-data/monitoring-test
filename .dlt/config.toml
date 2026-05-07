@@ -12,3 +12,10 @@ connector = "salesforce"
 connector_source = "dlt-verified"
 schema = "src_test_saleforce"
 created_at = "2026-05-07T11:38:35.872Z"
+[sources.abc.salesforce]
+
+[studio.sources.abc]
+connector = "salesforce"
+connector_source = "dlt-verified"
+schema = "src_abc"
+created_at = "2026-05-07T12:08:03.532Z"
