@@ -10,9 +10,9 @@
 | Phase 0 — Multi-destination split (if applicable) | - | N/A — single destination (DuckDB) |
 | Phase 1 — Workspace | 2026-05-10 | ✅ dbt + dlt scaffolded, debug passed |
 | Phase 2 — Requirements | 2026-05-10 | ✅ Objects and config resolved |
-| Phase 3a — Plan skeleton + change-impact | 2026-05-10 | In progress |
-| Phase 3b — Specialized design (profile/discover) | | |
-| Phase 3 — Design approval | | |
+| Phase 3a — Plan skeleton + change-impact | 2026-05-10 | ✅ Complete |
+| Phase 3b — Specialized design (profile/discover) | 2026-05-10 | ✅ Source schema discovered |
+| Phase 3 — Design approval | 2026-05-10 | ✅ Proceeding with verified source settings |
 | Phase 4a — Generate (per artifact) | | |
 | Phase 4b — Unit tests | | |
 | Phase 4c — Data tests (with tier pick) | | |
