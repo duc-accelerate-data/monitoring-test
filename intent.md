@@ -14,7 +14,10 @@ Build a dlt ingestion pipeline that extracts data from Salesforce using the `dlt
 
 ## Objects in Scope
 
-To be determined — awaiting user input on which Salesforce objects (e.g., Opportunity, Account, Contact, Lead, Campaign) should be included in this pipeline.
+- **Opportunity** — Sales pipeline opportunities
+- **Account** — Customer and prospect accounts
+- **Contact** — Individual contacts
+- **Lead** — Potential customers
 
 ## Success Criteria
 
@@ -26,16 +29,20 @@ To be determined — awaiting user input on which Salesforce objects (e.g., Oppo
 4. Pipeline executes without errors in dry-run mode
 5. Documentation generated for each resource
 
+## Configuration Decisions
+
+**Using dlt verified source settings (reconciled with initial preferences):**
+
+- **Opportunity:** merge mode, incremental on `SystemModstamp` (system field, more reliable than LastModifiedDate)
+- **Account:** merge mode, incremental on `LastModifiedDate`
+- **Contact:** replace mode, full refresh (no incremental)
+- **Lead:** replace mode, full refresh (no incremental)
+- **Field exclusions:** None
+- **Schema contract:** freeze (strict — no silent schema changes)
+
 ## Out of Scope
 
 - Data transformation (staging/marts) — ingestion only
 - Cross-object joins or business logic
-- Incremental load configuration (unless explicitly requested)
 - Data quality rules beyond Tier 1 tests
-
-## Open Questions
-
-1. **Which Salesforce objects should be ingested?** (e.g., Opportunity, Account, Contact, Lead, etc.)
-2. **Should incremental loading be configured?** If yes, which cursor field (e.g., LastModifiedDate, SystemModstamp)?
-3. **Are there specific fields to exclude** from any objects?
-4. **Write disposition preference:** merge (update existing rows) or replace (full refresh)?
+- Custom Salesforce objects (standard objects only)
