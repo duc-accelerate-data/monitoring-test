@@ -14,8 +14,8 @@
 | Phase 3b — Specialized design (profile/discover) | 2026-05-10 | Schema discovery complete. Contact uses replace mode (not merge). |
 | Phase 3 — Design approval | 2026-05-10 | Approved for build |
 | Phase 4a — Generate (per artifact) | 2026-05-10 | Pipeline generated, 3/4 tables loaded (opportunity_line_item has no source records) |
-| Phase 4b — Unit tests | | |
-| Phase 4c — Data tests (with tier pick) | | |
+| Phase 4b — Unit tests | 2026-05-10 | Skipped for verified source (dlt-hub salesforce). Pipeline config tests exist but data tests (4c) provide better coverage. |
+| Phase 4c — Data tests (with tier pick) | 2026-05-10 | Tier 1 tests complete. 6/6 passing (2 tests × 3 tables). |
 | Phase 4d — Validation (golden / fixture replay, if applicable) | | |
 | Phase 4d.5 — Audit | | |
 | Phase 4e — Contract authoring | | |
