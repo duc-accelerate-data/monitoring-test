@@ -15,3 +15,10 @@ connector = "salesforce"
 connector_source = "dlt-verified"
 schema = "src_may_10_3"
 created_at = "2026-05-10T04:03:40.063Z"
+[sources.test_dlt_may_10.salesforce]
+
+[studio.sources.test_dlt_may_10]
+connector = "salesforce"
+connector_source = "dlt-verified"
+schema = "src_test_dlt_may_10"
+created_at = "2026-05-10T04:04:16.360Z"
