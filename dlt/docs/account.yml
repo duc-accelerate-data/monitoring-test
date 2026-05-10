@@ -1,0 +1,8 @@
+resource: account
+source: salesforce
+target_table: src_dlt_test_3.account
+write_disposition: merge
+schema_contract: freeze
+incremental_cursor: LastModifiedDate
+description: "Salesforce Account records representing customer and prospect organizations"
+fields: []  # populated by documenting-dlt-pipelines in Phase 5b

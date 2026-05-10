@@ -1,0 +1,8 @@
+resource: opportunity
+source: salesforce
+target_table: src_dlt_test_3.opportunity
+write_disposition: merge
+schema_contract: freeze
+incremental_cursor: SystemModstamp
+description: "Salesforce Opportunity records representing sales pipeline deals"
+fields: []  # populated by documenting-dlt-pipelines in Phase 5b

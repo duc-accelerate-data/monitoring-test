@@ -1,0 +1,8 @@
+resource: lead
+source: salesforce
+target_table: src_dlt_test_3.lead
+write_disposition: replace
+schema_contract: freeze
+incremental_cursor: null
+description: "Salesforce Lead records representing potential customers not yet converted to accounts"
+fields: []  # populated by documenting-dlt-pipelines in Phase 5b

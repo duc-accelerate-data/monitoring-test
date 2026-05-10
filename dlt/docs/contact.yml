@@ -1,0 +1,8 @@
+resource: contact
+source: salesforce
+target_table: src_dlt_test_3.contact
+write_disposition: replace
+schema_contract: freeze
+incremental_cursor: null
+description: "Salesforce Contact records representing individual people associated with accounts"
+fields: []  # populated by documenting-dlt-pipelines in Phase 5b
