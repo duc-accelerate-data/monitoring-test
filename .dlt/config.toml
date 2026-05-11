@@ -5,3 +5,13 @@ connector = "salesforce"
 connector_source = "dlt-verified"
 schema = "src_ab"
 created_at = "2026-05-07T08:02:12.825Z"
+
+[runtime]
+dlthub_telemetry = true
+[sources.demo.salesforce]
+
+[studio.sources.demo]
+connector = "salesforce"
+connector_source = "dlt-verified"
+schema = "src_demo"
+created_at = "2026-05-11T08:45:19.534Z"
