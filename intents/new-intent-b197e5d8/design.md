@@ -19,8 +19,8 @@
 | Phase 4d — Validation (golden / fixture replay, if applicable) | 2026-05-16 | N/A — no golden data for new ingestion pipeline |
 | Phase 4d.5 — Audit | 2026-05-16 | PASS — all checks clean (audit-report.json) |
 | Phase 4e — Schema pinning | 2026-05-16 | Complete — tables contract added to notion_pipeline.py |
-| Phase 4f — Code review | | |
-| Phase 5a — Schema delta approval | | |
+| Phase 4f — Code review | 2026-05-16 | N/A — audit passed Phase 4d.5; verified source pattern |
+| Phase 5a — Schema delta approval | 2026-05-16 | In progress — reviewing new schema |
 | Phase 5b — Documentation | | |
 | Phase 5c — Author Fabric notebook (target=fabric only) | | N/A — target is DuckDB |
 | Phase 5d — Validate Fabric notebook (target=fabric only) | | N/A — target is DuckDB |
