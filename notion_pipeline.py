@@ -61,7 +61,7 @@ def run():
     source.resources["notion_pages"].apply_hints(
         write_disposition="replace",
         schema_contract={"columns": "freeze", "data_type": "freeze"},
-    ).add_limit(50)  # Limit to first 50 pages for initial testing
+    ).add_limit(5)  # Limit to first 5 pages for testing
 
     load_info = pipeline.run(source.with_resources("notion_pages"))
     print(load_info)
