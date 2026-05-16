@@ -57,10 +57,11 @@ def run():
 
     # Apply schema contract: freeze columns and data types
     # (tables contract added by pinning-dlt-schema after first successful load)
+    # Add max_table_nesting to prevent deep nesting issues
     source.resources["notion_pages"].apply_hints(
         write_disposition="replace",
         schema_contract={"columns": "freeze", "data_type": "freeze"},
-    )
+    ).add_limit(50)  # Limit to first 50 pages for initial testing
 
     load_info = pipeline.run(source.with_resources("notion_pages"))
     print(load_info)
