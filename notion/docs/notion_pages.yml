@@ -1,0 +1,8 @@
+resource: notion_pages
+source: notion
+target_table: src_notion_2.notion_pages
+write_disposition: replace
+schema_contract: freeze/freeze/freeze
+incremental_cursor: null
+description: "Notion page content blocks extracted from pages accessible to the integration"
+fields: []
