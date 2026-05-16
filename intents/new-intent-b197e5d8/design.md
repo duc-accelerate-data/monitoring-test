@@ -18,7 +18,7 @@
 | Phase 4c — Data tests (with tier pick) | 2026-05-16 | Tier 1 tests (_dlt_id non-null + unique) authored and validated |
 | Phase 4d — Validation (golden / fixture replay, if applicable) | 2026-05-16 | N/A — no golden data for new ingestion pipeline |
 | Phase 4d.5 — Audit | 2026-05-16 | PASS — all checks clean (audit-report.json) |
-| Phase 4e — Schema pinning | | |
+| Phase 4e — Schema pinning | 2026-05-16 | Complete — tables contract added to notion_pipeline.py |
 | Phase 4f — Code review | | |
 | Phase 5a — Schema delta approval | | |
 | Phase 5b — Documentation | | |
@@ -30,7 +30,7 @@
 
 | Object | Target Table | Write Disposition | Incremental Cursor | schema_contract | Status | Notes |
 |---|---|---|---|---|---|---|
-| notion_pages | src_notion_2.notion_pages | replace | N/A (full-refresh) | freeze/freeze/freeze | tested | 139 blocks; Tier 1 tests pass (0 NULL, 0 duplicate _dlt_id) |
+| notion_pages | src_notion_2.notion_pages | replace | N/A (full-refresh) | freeze/freeze/freeze | pinned | 139 blocks; Tier 1 tests pass (0 NULL, 0 duplicate _dlt_id); tables contract added Phase 4e |
 
 ## Source Schema Discovery
 

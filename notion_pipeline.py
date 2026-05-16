@@ -55,12 +55,15 @@ def run():
     # Select only notion_pages resource for this intent
     source = notion_2_source()
 
-    # Apply schema contract: freeze columns and data types
-    # (tables contract added by pinning-dlt-schema after first successful load)
-    # Add max_table_nesting to prevent deep nesting issues
+    # Apply schema contract: freeze all aspects after successful initial load
+    # Tables loaded successfully in Phase 4a, now pinning tables contract
     source.resources["notion_pages"].apply_hints(
         write_disposition="replace",
-        schema_contract={"columns": "freeze", "data_type": "freeze"},
+        schema_contract={
+            "tables": "freeze",    # Block new tables (schema is stable)
+            "columns": "freeze",   # Block new/renamed columns (schema is stable)
+            "data_type": "freeze", # Block type coercions (schema is stable)
+        },
     ).add_limit(5)  # Limit to first 5 pages for testing
 
     load_info = pipeline.run(source.with_resources("notion_pages"))
