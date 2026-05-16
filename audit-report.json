@@ -1,0 +1,49 @@
+{
+  "skill": "evaluating-dlt-pipeline",
+  "phase": "4d.5",
+  "timestamp": "2026-05-16T19:12:00Z",
+  "pipeline": "notion_pipeline.py",
+  "resource": "notion_pages",
+  "findings": [
+    {
+      "severity": "info",
+      "rule": "file-structure",
+      "resource": "notion_pipeline.py",
+      "detail": "Pipeline file at root instead of ingestion/pipeline.py (acceptable for verified source, note for future reorganization)"
+    }
+  ],
+  "checks": [
+    {
+      "rule": "pipeline_naming",
+      "resource": "notion_2_bronze",
+      "result": "pass",
+      "detail": "Pipeline name 'notion_2_bronze' follows <connection_name>_bronze pattern"
+    },
+    {
+      "rule": "dataset_naming",
+      "resource": "src_notion_2",
+      "result": "pass",
+      "detail": "Dataset name 'src_notion_2' matches [studio.sources.notion_2].schema from config.toml"
+    },
+    {
+      "rule": "schema_contract_present",
+      "resource": "notion_pages",
+      "result": "pass",
+      "detail": "schema_contract applied via .apply_hints() with columns=freeze, data_type=freeze (correct pattern for verified source)"
+    },
+    {
+      "rule": "parent_child_consistency",
+      "resource": "notion_pages",
+      "result": "pass",
+      "detail": "No @dlt.transformer decorators found (N/A)"
+    },
+    {
+      "rule": "dlt_id_invariant",
+      "resource": "notion_pages",
+      "result": "pass",
+      "detail": "No _dlt_id modifications found in pipeline code"
+    }
+  ],
+  "halt": false,
+  "status": "clean"
+}

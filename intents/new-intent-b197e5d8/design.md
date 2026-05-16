@@ -16,8 +16,8 @@
 | Phase 4a — Generate (per artifact) | 2026-05-16 | Pipeline generated, tested with 5-page limit, 7 tables loaded |
 | Phase 4b — Unit tests | 2026-05-16 | 6 test scenarios authored (not executed - pytest unavailable) |
 | Phase 4c — Data tests (with tier pick) | 2026-05-16 | Tier 1 tests (_dlt_id non-null + unique) authored and validated |
-| Phase 4d — Validation (golden / fixture replay, if applicable) | | |
-| Phase 4d.5 — Audit | | |
+| Phase 4d — Validation (golden / fixture replay, if applicable) | 2026-05-16 | N/A — no golden data for new ingestion pipeline |
+| Phase 4d.5 — Audit | 2026-05-16 | PASS — all checks clean (audit-report.json) |
 | Phase 4e — Schema pinning | | |
 | Phase 4f — Code review | | |
 | Phase 5a — Schema delta approval | | |
