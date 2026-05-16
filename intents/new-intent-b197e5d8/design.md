@@ -14,8 +14,8 @@
 | Phase 3b — Specialized design (profile/discover) | 2026-05-16 | Schema discovery complete |
 | Phase 3 — Design approval | 2026-05-16 | APPROVE — all blocking issues resolved |
 | Phase 4a — Generate (per artifact) | 2026-05-16 | Pipeline generated, tested with 5-page limit, 7 tables loaded |
-| Phase 4b — Unit tests | | |
-| Phase 4c — Data tests (with tier pick) | | |
+| Phase 4b — Unit tests | 2026-05-16 | 6 test scenarios authored (not executed - pytest unavailable) |
+| Phase 4c — Data tests (with tier pick) | 2026-05-16 | Tier 1 tests (_dlt_id non-null + unique) authored and validated |
 | Phase 4d — Validation (golden / fixture replay, if applicable) | | |
 | Phase 4d.5 — Audit | | |
 | Phase 4e — Schema pinning | | |
@@ -30,7 +30,7 @@
 
 | Object | Target Table | Write Disposition | Incremental Cursor | schema_contract | Status | Notes |
 |---|---|---|---|---|---|---|
-| notion_pages | src_notion_2.notion_pages | replace | N/A (full-refresh) | freeze/freeze/freeze | generated | 139 blocks loaded from 5 pages; 7 tables (parent + 6 nested child tables) |
+| notion_pages | src_notion_2.notion_pages | replace | N/A (full-refresh) | freeze/freeze/freeze | tested | 139 blocks; Tier 1 tests pass (0 NULL, 0 duplicate _dlt_id) |
 
 ## Source Schema Discovery
 

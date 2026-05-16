@@ -1,0 +1,24 @@
+{
+  "target": "src_notion_2.notion_pages",
+  "selection": "tier1",
+  "tests": [
+    {
+      "name": "notion_pages_dlt_id_not_null",
+      "type": "not_null",
+      "tier": 1,
+      "config": {
+        "column": "_dlt_id",
+        "table": "src_notion_2.notion_pages"
+      }
+    },
+    {
+      "name": "notion_pages_dlt_id_unique",
+      "type": "unique",
+      "tier": 1,
+      "config": {
+        "column": "_dlt_id",
+        "table": "src_notion_2.notion_pages"
+      }
+    }
+  ]
+}
