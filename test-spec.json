@@ -1,0 +1,48 @@
+{
+  "model_or_resource": "notion_pages",
+  "test_file": "/Users/duc/Documents/accelerate_data/vd-studio/tmp/clones/2c246a56-49eb-4ca4-9c9b-1d7674d581b9/b197e5d8-b5ec-4fd4-95bb-275bd72b7bf8/tests/unit/test_notion_pages.py",
+  "scenarios": [
+    {
+      "name": "happy_path_multiple_pages_with_blocks",
+      "given": "Notion search returns 2 pages, each with 3 child blocks",
+      "when": "resource is executed without page_ids filter",
+      "then": "2 block lists are yielded, each containing 3 blocks",
+      "branch_type": "happy_path"
+    },
+    {
+      "name": "empty_search_response",
+      "given": "Notion search returns zero pages",
+      "when": "resource is executed",
+      "then": "no blocks are yielded and no exception is raised",
+      "branch_type": "edge_case"
+    },
+    {
+      "name": "page_with_zero_blocks",
+      "given": "Notion search returns 1 page with zero child blocks",
+      "when": "resource is executed",
+      "then": "no blocks are yielded because the if blocks: guard prevents empty yields",
+      "branch_type": "edge_case"
+    },
+    {
+      "name": "page_ids_filter_matches",
+      "given": "Notion search returns 3 pages but page_ids=['page-1'] is provided",
+      "when": "resource is executed with page_ids filter",
+      "then": "only the blocks from page-1 are yielded",
+      "branch_type": "happy_path"
+    },
+    {
+      "name": "page_ids_filter_no_match",
+      "given": "Notion search returns 2 pages but page_ids=['non-existent-id'] is provided",
+      "when": "resource is executed with page_ids filter",
+      "then": "no blocks are yielded",
+      "branch_type": "edge_case"
+    },
+    {
+      "name": "mixed_pages_with_and_without_blocks",
+      "given": "Notion search returns 3 pages: page-1 has 2 blocks, page-2 has 0 blocks, page-3 has 1 block",
+      "when": "resource is executed without filter",
+      "then": "2 block lists are yielded (page-1 and page-3), page-2 is skipped due to empty blocks",
+      "branch_type": "edge_case"
+    }
+  ]
+}
