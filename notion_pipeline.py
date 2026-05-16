@@ -26,8 +26,9 @@ Configuration & secrets contract
 
 import dlt
 
-# Import every top-level decorated symbol the Pipeline Inventory needs.
-from notion import notion_databases, notion_pages
+# Import only the resources in scope for this intent.
+# notion_databases excluded due to upstream IndexError on empty titles.
+from notion import notion_pages
 
 
 @dlt.source(section="notion_2", name="notion")
@@ -40,7 +41,6 @@ def notion_2_source(api_key: str = dlt.secrets.value):
     field marked `dlt.secrets.value` on the wrapper's signature above.
     """
     return [
-        notion_databases(api_key=api_key),
         notion_pages(api_key=api_key)
     ]
 
