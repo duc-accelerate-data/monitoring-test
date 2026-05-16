@@ -5,3 +5,22 @@ connector = "salesforce"
 connector_source = "dlt-verified"
 schema = "src_ab"
 created_at = "2026-05-07T08:02:12.825Z"
+
+[runtime]
+dlthub_telemetry = true
+[sources.sf_5.salesforce]
+
+[sources.sf_5.salesforce.credentials]
+user_name = "ss@acceleratedata.ai"
+
+[sources.sf_5.salesforce_source]
+
+[sources.sf_5.salesforce_source.credentials]
+user_name = "ss@acceleratedata.ai"
+
+[studio.sources.sf_5]
+connector = "salesforce"
+connector_source = "dlt-verified"
+schema = "src_sf_5"
+auth_method = "security_token"
+created_at = "2026-05-16T11:17:15.438Z"
