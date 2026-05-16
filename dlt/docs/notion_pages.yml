@@ -1,0 +1,8 @@
+resource: notion_pages
+source: notion
+target_table: src_notion_4.notion_pages
+write_disposition: append
+schema_contract: freeze/evolve/freeze
+incremental_cursor: null
+description: "Page blocks from all accessible Notion pages in the workspace"
+fields: []  # populated by documenting-dlt-pipelines in Phase 5b
