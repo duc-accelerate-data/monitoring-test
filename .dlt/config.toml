@@ -5,3 +5,16 @@ connector = "salesforce"
 connector_source = "dlt-verified"
 schema = "src_ab"
 created_at = "2026-05-07T08:02:12.825Z"
+
+[runtime]
+dlthub_telemetry = true
+[sources.notion_2.notion]
+
+[sources.notion_2.notion_databases]
+
+[studio.sources.notion_2]
+connector = "notion"
+connector_source = "dlt-verified"
+schema = "src_notion_2"
+auth_method = "default"
+created_at = "2026-05-16T11:35:59.831Z"
